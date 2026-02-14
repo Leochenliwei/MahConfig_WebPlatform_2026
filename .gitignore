@@ -114,3 +114,7 @@ dist
 # 忽略测试的 Python 脚本
 **/test_*.py
 **/*_test.py
+
+# 忽略测试结果和截图目录
+test_results/
+test_screenshots/
