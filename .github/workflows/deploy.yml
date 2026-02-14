@@ -27,9 +27,12 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VUE_APP_ENV_ID: ${{ secrets.VUE_APP_ENV_ID }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          destination_dir: /
